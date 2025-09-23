@@ -1,0 +1,10 @@
+# Ignore everything starting with a dot (hidden files/dirs)…
+.*
+# …but keep .gitignore (and optionally others you care about)
+!.gitignore
+!.gitattributes
+!.gitmodules
+
+# Ignore files containing "log" or "debug" in their name
+*log*
+*debug*

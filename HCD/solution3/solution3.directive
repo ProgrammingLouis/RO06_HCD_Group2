@@ -1,0 +1,40 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="HCD_filter_hw" label="inner_loop" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="HCD_filter_hw" label="x_pixels_loop" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="HCD_filter_hw" label="y_window_loop" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="3"/>
+            </pragma>
+        </directive>
+        <directive functionName="HCD_filter_hw" label="x_window_loop" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="3"/>
+            </pragma>
+        </directive>
+        <directive functionName="wrapped_HCD_filter_hw" label="x_Ix_read_loop" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="wrapped_HCD_filter_hw" label="x_Iy_read_loop" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="wrapped_HCD_filter_hw" label="x_conv_loop" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="1"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+
