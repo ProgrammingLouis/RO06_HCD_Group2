@@ -4,14 +4,14 @@
 #include "hls_math.h"
 
 #ifndef WIDTH
-#define WIDTH 256 // Taille par défaut si non définie
+#define WIDTH 256 // Taille par dï¿½faut si non dï¿½finie
 #endif
 
 #ifndef HEIGHT
-#define HEIGHT 256 // Taille par défaut si non définie
+#define HEIGHT 256 // Taille par dï¿½faut si non dï¿½finie
 #endif
 
-#define K 0.04 // Constante de Harris
+#define K 0.05 // Constante de Harris
 #define Rseuil 500
 
 #define IMG_SIZE WIDTH * HEIGHT
@@ -28,7 +28,7 @@ void HLS_accel(AXI_VAL in_stream[IMG_SIZE], AXI_VAL out_stream[IMG_SIZE]);
 template <typename T>
 T apply_kernel_single_block(T input[3][3]) {
 #pragma HLS INLINE
-    // Somme des valeurs dans la fenêtre 3x3, chaque pixel est pondéré à 1
+    // Somme des valeurs dans la fenï¿½tre 3x3, chaque pixel est pondï¿½rï¿½ ï¿½ 1
     T sum = 0;
     sum += input[0][0];
     sum += input[0][1];
@@ -52,15 +52,15 @@ void HCD_filter_hw(T I_x[IMG_HEIGHT][IMG_WIDTH], T I_y[IMG_HEIGHT][IMG_WIDTH], T
     T S_y2[IMG_HEIGHT][IMG_WIDTH] = {0};
     T S_xy[IMG_HEIGHT][IMG_WIDTH] = {0};
 
-    // Calcul pour chaque pixel de l'image entière
+    // Calcul pour chaque pixel de l'image entiï¿½re
     y_pixels_loop: for (int y = 1; y < IMG_HEIGHT - 1; y++) {
     	x_pixels_loop: for (int x = 1; x < IMG_WIDTH - 1; x++) {
-            // Calcul des produits Ix^2, Iy^2, Ix*Iy pour les fenêtres de lissage
+            // Calcul des produits Ix^2, Iy^2, Ix*Iy pour les fenï¿½tres de lissage
             T Ix2_window[3][3];
             T Iy2_window[3][3];
             T Ixy_window[3][3];
 
-            // Remplir les fenêtres de produits pour le lissage
+            // Remplir les fenï¿½tres de produits pour le lissage
             y_window_loop: for (int ky = -1; ky <= 1; ky++) {
                 x_window_loop: for (int kx = -1; kx <= 1; kx++) {
                     int yy = y + ky;
@@ -71,22 +71,23 @@ void HCD_filter_hw(T I_x[IMG_HEIGHT][IMG_WIDTH], T I_y[IMG_HEIGHT][IMG_WIDTH], T
                 }
             }
 
-            // Appliquer le noyau de lissage sur les produits calculés
+            // Appliquer le noyau de lissage sur les produits calculï¿½s
             S_x2[y][x] = apply_kernel_single_block<T>(Ix2_window);
             S_y2[y][x] = apply_kernel_single_block<T>(Iy2_window);
             S_xy[y][x] = apply_kernel_single_block<T>(Ixy_window);
 
-            // Calcul de la réponse Harris
+            // Calcul de la rï¿½ponse Harris
             double det_M = (double)(S_x2[y][x] * S_y2[y][x]) - (double)(S_xy[y][x] * S_xy[y][x]);
             double trace_M = (double)(S_x2[y][x] + S_y2[y][x]);
             double R = det_M - K * (trace_M * trace_M);
 
-            // Détection de coin en appliquant un seuil
-            if (R > Rseuil) {
-                output_img[y][x] = 1;
-            } else {
-                output_img[y][x] = 0;
-            }
+            output_img[y][x] = (T)R
+            // // Dï¿½tection de coin en appliquant un seuil
+            // if (R > Rseuil) {
+            //     output_img[y][x] = 1;
+            // } else {
+            //     output_img[y][x] = 0;
+            // }
         }
     }
 }
@@ -132,7 +133,7 @@ void wrapped_HCD_filter_hw(AXI_VAL in_stream[SIZE * 2], AXI_VAL out_stream[SIZE]
      }
  }
 
- // Lecture de I_y (décalage de SIZE pour la seconde image)
+ // Lecture de I_y (dï¿½calage de SIZE pour la seconde image)
  for (int y = 0; y < IMG_HEIGHT; y++) {
 	 x_Iy_read_loop: for (int x = 0; x < IMG_WIDTH; x++) {
          int idx = y * IMG_WIDTH + x + SIZE;
