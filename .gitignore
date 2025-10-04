@@ -8,3 +8,8 @@
 # Ignore files containing "log" or "debug" in their name
 *log*
 *debug*
+
+# Ignore executable files
+*.out
+*.x
+*.exe
