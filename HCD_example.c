@@ -55,7 +55,7 @@ void HCD_filter(uint dimy, uint dimx, int16_t I_x[dimy][dimx], int16_t I_y[dimy]
             double trace_M = (double)(S_x2[y][x] + S_y2[y][x]);
             double R = det_M - 0.05 * (trace_M * trace_M);
 
-            output_img[y][x] = R/2 > 255.0 ? (uint8_t)(255) : R/2 < 0.0 ? 0 : (uint8_t)(R/2);
+            output_img[y][x] = R/100000. > 255.0 ? (uint8_t)(255) : R/100000. < 0.0 ? 0 : (uint8_t)(R/100000.);
         }
     }
 }
