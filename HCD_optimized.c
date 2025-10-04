@@ -61,7 +61,7 @@ void HCD_filter(uint dimy, uint dimx, int32_t Iy2[restrict dimy][dimx], int32_t 
 int main(void)
 {
   // Read colored input image
-  ppm_file_t input_ppm_file = read_ppm_file("Text_company_logo.ppm");
+  ppm_file_t input_ppm_file = read_ppm_file("text_test.ppm");
   if (input_ppm_file.dimy == 0 || input_ppm_file.dimx == 0 || !input_ppm_file.pixels)
     return EXIT_FAILURE;
   uint dimy = input_ppm_file.dimy;
