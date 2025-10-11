@@ -1,0 +1,166 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="HCD_filter_hw" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="pop_stream" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="push_stream" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="wrapped_HCD_filter_hw" label="" functionLabel="">
+            <pragma name="INLINE"/>
+        </directive>
+        <directive functionName="wrapped_HCD_filter_hw" label="wrapped_HCD_filter_hw_label0" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="wrapped_HCD_filter_hw" label="wrapped_HCD_filter_hw_label1" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="wrapped_HCD_filter_hw" label="wrapped_HCD_filter_hw_label2" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="wrapped_HCD_filter_hw" label="wrapped_HCD_filter_hw_label3" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="wrapped_HCD_filter_hw" label="wrapped_HCD_filter_hw_label4" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="wrapped_HCD_filter_hw" label="wrapped_HCD_filter_hw_label5" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="HCD_filter_hw" label="HCD_filter_hw_label2" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="HCD_filter_hw" label="HCD_filter_hw_label3" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="wrapped_HCD_filter_hw" label="wrapped_HCD_filter_hw_label0" functionLabel="">
+            <pragma name="LOOP_FLATTEN"/>
+        </directive>
+        <directive functionName="wrapped_HCD_filter_hw" label="wrapped_HCD_filter_hw_label2" functionLabel="">
+            <pragma name="LOOP_FLATTEN"/>
+        </directive>
+        <directive functionName="wrapped_HCD_filter_hw" label="wrapped_HCD_filter_hw_label4" functionLabel="">
+            <pragma name="LOOP_FLATTEN"/>
+        </directive>
+        <directive functionName="HCD_filter_hw" label="HCD_filter_hw_label0" functionLabel="">
+            <pragma name="LOOP_FLATTEN"/>
+        </directive>
+        <directive functionName="HCD_filter_hw" label="HCD_filter_hw_label2" functionLabel="">
+            <pragma name="LOOP_FLATTEN"/>
+        </directive>
+        <directive functionName="wrapped_HCD_filter_hw" label="wrapped_HCD_filter_hw_label1" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="32"/>
+            </pragma>
+        </directive>
+        <directive functionName="wrapped_HCD_filter_hw" label="wrapped_HCD_filter_hw_label3" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="32"/>
+            </pragma>
+        </directive>
+        <directive functionName="wrapped_HCD_filter_hw" label="wrapped_HCD_filter_hw_label5" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="32"/>
+            </pragma>
+        </directive>
+        <directive functionName="HCD_filter_hw" label="HCD_filter_hw_label1" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="32"/>
+            </pragma>
+        </directive>
+        <directive functionName="HCD_filter_hw" label="HCD_filter_hw_label3" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="32"/>
+            </pragma>
+        </directive>
+        <directive functionName="wrapped_HCD_filter_hw" label="wrapped_HCD_filter_hw_label0" functionLabel="">
+            <pragma name="EXPRESSION_BALANCE"/>
+        </directive>
+        <directive functionName="wrapped_HCD_filter_hw" label="wrapped_HCD_filter_hw_label1" functionLabel="">
+            <pragma name="EXPRESSION_BALANCE"/>
+        </directive>
+        <directive functionName="wrapped_HCD_filter_hw" label="wrapped_HCD_filter_hw_label2" functionLabel="">
+            <pragma name="EXPRESSION_BALANCE"/>
+        </directive>
+        <directive functionName="wrapped_HCD_filter_hw" label="wrapped_HCD_filter_hw_label3" functionLabel="">
+            <pragma name="EXPRESSION_BALANCE"/>
+        </directive>
+        <directive functionName="wrapped_HCD_filter_hw" label="wrapped_HCD_filter_hw_label4" functionLabel="">
+            <pragma name="EXPRESSION_BALANCE"/>
+        </directive>
+        <directive functionName="wrapped_HCD_filter_hw" label="wrapped_HCD_filter_hw_label5" functionLabel="">
+            <pragma name="EXPRESSION_BALANCE"/>
+        </directive>
+        <directive functionName="HCD_filter_hw" label="HCD_filter_hw_label2" functionLabel="">
+            <pragma name="EXPRESSION_BALANCE"/>
+        </directive>
+        <directive functionName="HCD_filter_hw" label="HCD_filter_hw_label3" functionLabel="">
+            <pragma name="EXPRESSION_BALANCE"/>
+        </directive>
+        <directive functionName="apply_kernel_single_block" label="" functionLabel="">
+            <pragma name="EXPRESSION_BALANCE"/>
+        </directive>
+        <directive functionName="HCD_filter_hw" label="" functionLabel="">
+            <pragma name="EXPRESSION_BALANCE"/>
+        </directive>
+        <directive functionName="pop_stream" label="" functionLabel="">
+            <pragma name="EXPRESSION_BALANCE"/>
+        </directive>
+        <directive functionName="push_stream" label="" functionLabel="">
+            <pragma name="EXPRESSION_BALANCE"/>
+        </directive>
+        <directive functionName="wrapped_HCD_filter_hw" label="" functionLabel="">
+            <pragma name="EXPRESSION_BALANCE"/>
+        </directive>
+        <directive functionName="apply_kernel_single_block" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="return" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="HCD_filter_hw" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="return" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="pop_stream" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="return" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="push_stream" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="return" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="wrapped_HCD_filter_hw" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="return" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

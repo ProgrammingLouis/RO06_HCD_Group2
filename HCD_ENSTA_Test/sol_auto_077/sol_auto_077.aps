@@ -1,0 +1,22 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <name>
+        <value string="sol_auto_077"/>
+    </name>
+    <project>
+        <value string="HCD_ENSTA_Test"/>
+    </project>
+    <targetInfo>
+        <TargetInfo value="xc7z020:-clg484:-1"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/zynq/zynq" name="DefaultPlatform"/>
+        <library value="xilinx/zynq/zynq_fpv6" name="DefaultPlatform"/>
+    </libraryList>
+    <clockList>
+        <clock name="default" period="2" default="false"/>
+    </clockList>
+    <config>
+        <schedule model="HLS_accel"/>
+    </config>
+</AutoPilot:solution>
+
